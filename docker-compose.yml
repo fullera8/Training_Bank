@@ -4,17 +4,20 @@ services:
     build:
       context: ./backend
       dockerfile: Training_Bank_Backend/Dockerfile
+    image: trainingbank/backend:latest
     ports:
       - "8080:8080"
   tests:
     build:
       context: ./backend
       dockerfile: Training_Bank_Backend.Tests/Dockerfile
+    image: trainingbank/tests:latest
     depends_on:
       - backend
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+    image: trainingbank/frontend:latest
     ports:
       - "4200:4200"
