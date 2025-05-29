@@ -2,13 +2,19 @@ version: '3.8'
 services:
   backend:
     build:
-      context: .
+      context: ./backend
       dockerfile: Training_Bank_Backend/Dockerfile
     ports:
       - "8080:8080"
   tests:
     build:
-      context: .
+      context: ./backend
       dockerfile: Training_Bank_Backend.Tests/Dockerfile
     depends_on:
       - backend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
