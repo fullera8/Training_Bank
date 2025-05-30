@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: ghcr.io/fullera8/trainingbank-backend:latest
+          ports:
+            - containerPort: 8080
+          # Uncomment and configure the following if you need environment variables (e.g., for DB connection)
+          # env:
+          #   - name: ConnectionStrings__DefaultConnection
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: sql-connection-secret
+          #         key: connection-string
