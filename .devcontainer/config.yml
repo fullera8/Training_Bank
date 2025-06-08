@@ -1,0 +1,5 @@
+tunnel: intelliagent-ide-tunnel
+credentials-file: ~/.cloudflared/intelliagent-ide-tunnel.json
+ingress:
+  - hostname: intelliagent-ide.app
+    service: http://localhost:PORT  # Replace PORT with the local port your AI API code uses

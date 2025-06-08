@@ -1,0 +1,50 @@
+#version: "3.9"
+
+services:
+  dev-container:
+    # Use the image or build definition for your dev container.
+    # If you have a Dockerfile for your dev container, use 'build'.
+    # If you're using a pre-built image, use 'image'.
+    # Example using a pre-built image:
+    image: mcr.microsoft.com/devcontainers/dotnet:1-9.0
+
+    container_name: my-dev-container
+
+    networks:
+      - my-dev-network
+
+    volumes:
+      - ..:/workspaces/Training_Bank
+    command: sleep infinity
+
+  cloudflare-tunnel:
+    image: cloudflare/cloudflared:latest
+
+    container_name: cloudflare-tunnel
+
+    restart: unless-stopped
+
+    env_file:
+      - ../.env # Loads variables from the .env file at the project root
+
+    environment:
+      # Use the environment variable loaded from the .env file
+      - CLOUDFLARE_TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}
+
+    # Use the environment variable in the command
+    command: tunnel run --token ${CLOUDFLARE_TUNNEL_TOKEN}
+    
+    volumes:
+      - cloudflare_config:/etc/cloudflared
+
+    networks:
+      - my-dev-network
+
+networks:
+  my-dev-network:
+    driver: bridge
+
+volumes:
+  cloudflare_config:
+  vscode:
+    external: true
