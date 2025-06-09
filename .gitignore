@@ -137,3 +137,4 @@
 **/.node_repl_history
 .cloudflared/intelliagent-ide-tunnel.json
 tree.txt
+frontend-deployment-pod.yml
