@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend
+  namespace: training-bank-rks # Add this line
 spec:
   replicas: 1
   selector:
@@ -11,6 +12,7 @@ spec:
     metadata:
       labels:
         app: backend
+      # No namespace needed here, it's inherited from the Deployment's metadata
     spec:
       imagePullSecrets:
         - name: ghcr-secret

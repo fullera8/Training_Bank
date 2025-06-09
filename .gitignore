@@ -138,3 +138,4 @@
 .cloudflared/intelliagent-ide-tunnel.json
 tree.txt
 frontend-deployment-pod.yml
+ghcr-secret.yml
