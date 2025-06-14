@@ -21,15 +21,71 @@ We are creating a mock banking app using the following tech stack:
 - **VS Code dev containers** for consistent development environments
 - **Automated CI/CD pipeline** with GitHub Actions
 
-## Documentation
+## Documentation Architecture
 
-**Comprehensive Technical Guide:**
-- **[📚 Project Wiki](../../wiki)** - Complete technical documentation and guides
-- **[💬 Chat Logs](../../wiki/ChatLog)** - Detailed debugging scenarios and architectural decisions
-- **[🔧 Backend Guide](../../wiki/Backend)** - .NET 8 MVC with containerization
-- **[🎨 Frontend Guide](../../wiki/Frontend)** - Angular with Docker development
-- **[🚀 Container Orchestration](../../wiki/ContainerOrchestration)** - GHCR and AKS deployment
-- **[⚙️ Development Environment](../../wiki/DevelopmentEnvironmentSetup)** - VS Code dev containers
+This project uses a **tiered documentation system** optimized for both human developers and AI assistance:
+
+### For Developers Using AI Assistants
+
+#### Query Optimization Guidelines
+
+**For Simple/Quick Questions:**
+```
+Examples: "What port?", "What .NET version?", "Start command?"
+Recommended: Use Quick Reference docs for token efficiency
+- Backend-Quick.md
+- Frontend-Quick.md  
+- Container-Quick.md
+- DevEnv-Quick.md
+```
+
+**For Implementation Questions:**
+```
+Examples: "How to setup?", "Step-by-step guide?", "Configuration help?"
+Recommended: Use Implementation Guides
+- Backend.md
+- Frontend.md
+- ContainerOrchestration.md
+- DevelopmentEnvironmentSetup.md
+```
+
+**For Complex Debugging/Architecture:**
+```
+Examples: "Debug build failures?", "Why this approach?", "Troubleshooting?"
+Recommended: Use Comprehensive Reference
+- ChatLog.md (Primary technical reference with debugging scenarios)
+```
+
+#### Token-Efficient AI Prompting Examples
+
+**Efficient Query:**
+```
+Context: Backend-Quick.md only
+Question: What port does the backend use?
+```
+
+**Implementation Query:**
+```
+Context: Backend.md
+Question: How do I set up multi-stage Docker builds?
+```
+
+**Rich-Context Query:**
+```
+Context: ChatLog.md#backend-development-and-containerization
+Question: Debug ImagePullBackOff error with platform architecture mismatch
+```
+
+### Documentation Structure
+
+```
+Training_Bank.wiki/
+├── Metadata-Legend.md          # Metadata interpretation guide
+├── ChatLog.md                  # Comprehensive technical reference
+├── *-Quick.md                  # Token-optimized quick references
+├── *.md                        # Implementation guides
+└── Home.md                     # Navigation hub
+```
 
 ## Quick Start
 
@@ -121,11 +177,14 @@ For detailed technical procedures, debugging scenarios, and architectural decisi
 This project's documentation includes specialized metadata fields designed for advanced Large Language Models (LLMs) with high-end coding and reasoning capabilities, such as Gemini 2.5 Pro, Claude 4, or o4-mini High.
 
 **Purpose of Metadata Fields:**
-- **Structured Context:** The `[METADATA]`, `[LLM_CONTEXT]`, and similar annotations provide LLMs with deeper, structured understanding of technical concepts, debugging workflows, and architectural decisions
+- **Structured Context:** The metadata annotations provide LLMs with deeper, structured understanding of technical concepts, debugging workflows, and architectural decisions
 - **Enhanced Assistance:** This structured approach enables AI models to provide more effective, context-aware assistance to developers working with the codebase
 - **AI-Driven Development:** The metadata supports advanced AI-assisted development workflows, including automated code generation, debugging assistance, and architectural guidance
+- **Token Optimization:** Tiered documentation structure allows developers to choose appropriate context level for efficient AI interactions
 
 **Target Audience:** These enhancements are specifically designed for developers using cutting-edge AI coding assistants and automated development tools.
+
+**Metadata Interpretation:** See [Metadata Legend](../../wiki/Metadata-Legend) for complete tag definitions and usage guidelines.
 
 For the latest AI model performance benchmarks in coding tasks, refer to the [LiveBench AI Coding Leaderboard](https://livebench.ai/#/?Coding=a).
 
@@ -138,3 +197,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Built with free-tier services to demonstrate enterprise architecture patterns
 - Designed for educational purposes and skill development
 - Comprehensive documentation for both human developers and AI model training
+- Tiered documentation system optimized for token-efficient AI interactions
+
+---
