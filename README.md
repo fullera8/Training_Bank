@@ -33,27 +33,27 @@ This project uses a **tiered documentation system** optimized for both human dev
 ```
 Examples: "What port?", "What .NET version?", "Start command?"
 Recommended: Use Quick Reference docs for token efficiency
-- Backend-Quick.md
-- Frontend-Quick.md  
-- Container-Quick.md
-- DevEnv-Quick.md
+- 🔧 Backend-Quick.md
+- 🎨 Frontend-Quick.md  
+- 📦 Container-Quick.md
+- ⚙️ DevEnv-Quick.md
 ```
 
 **For Implementation Questions:**
 ```
 Examples: "How to setup?", "Step-by-step guide?", "Configuration help?"
 Recommended: Use Implementation Guides
-- Backend.md
-- Frontend.md
-- ContainerOrchestration.md
-- DevelopmentEnvironmentSetup.md
+- 🏗️ Backend.md
+- 🖼️ Frontend.md
+- 🚀 ContainerOrchestration.md
+- 🛠️ DevelopmentEnvironmentSetup.md
 ```
 
 **For Complex Debugging/Architecture:**
 ```
 Examples: "Debug build failures?", "Why this approach?", "Troubleshooting?"
 Recommended: Use Comprehensive Reference
-- ChatLog.md (Primary technical reference with debugging scenarios)
+- 💬 ChatLog.md (Primary technical reference with debugging scenarios)
 ```
 
 #### Token-Efficient AI Prompting Examples
@@ -80,11 +80,11 @@ Question: Debug ImagePullBackOff error with platform architecture mismatch
 
 ```
 Training_Bank.wiki/
-├── Metadata-Legend.md          # Metadata interpretation guide
-├── ChatLog.md                  # Comprehensive technical reference
-├── *-Quick.md                  # Token-optimized quick references
-├── *.md                        # Implementation guides
-└── Home.md                     # Navigation hub
+├── 🏷️ Metadata-Legend.md          # Metadata interpretation guide
+├── 💬 ChatLog.md                  # Comprehensive technical reference
+├── ⚡ *-Quick.md                  # Token-optimized quick references
+├── 📋 *.md                        # Implementation guides
+└── 🏠 Home.md                     # Navigation hub
 ```
 
 ## Quick Start
@@ -113,8 +113,8 @@ Training_Bank.wiki/
    ```
 
 4. **Access the application:**
-   - **Frontend:** [http://localhost:4200](http://localhost:4200)
-   - **Backend API:** [http://localhost:8080](http://localhost:8080)
+   - **Frontend:** [🌐 http://localhost:4200](http://localhost:4200)
+   - **Backend API:** [🔗 http://localhost:8080](http://localhost:8080)
 
 ## Architecture Overview
 
@@ -164,13 +164,13 @@ This project serves as a learning resource for cloud-native banking application 
 
 ## Learning Resources
 
-For detailed technical procedures, debugging scenarios, and architectural decisions, refer to the comprehensive [Project Wiki](../../wiki).
+For detailed technical procedures, debugging scenarios, and architectural decisions, refer to the comprehensive [📚 Project Wiki](../../wiki).
 
 **Recommended Learning Path:**
-1. [Development Environment Setup](../../wiki/DevelopmentEnvironmentSetup) - Foundation setup
-2. [Backend Development](../../wiki/Backend) - Core business logic and API design
-3. [Frontend Development](../../wiki/Frontend) - User interface and client-side architecture
-4. [Container Orchestration](../../wiki/ContainerOrchestration) - Deployment and scaling
+1. [🛠️ Development Environment Setup](../../wiki/DevelopmentEnvironmentSetup) - Foundation setup
+2. [🔧 Backend Development](../../wiki/Backend) - Core business logic and API design
+3. [🎨 Frontend Development](../../wiki/Frontend) - User interface and client-side architecture
+4. [🚀 Container Orchestration](../../wiki/ContainerOrchestration) - Deployment and scaling
 
 ## AI-Enhanced Documentation
 
@@ -184,9 +184,9 @@ This project's documentation includes specialized metadata fields designed for a
 
 **Target Audience:** These enhancements are specifically designed for developers using cutting-edge AI coding assistants and automated development tools.
 
-**Metadata Interpretation:** See [Metadata Legend](../../wiki/Metadata-Legend) for complete tag definitions and usage guidelines.
+**Metadata Interpretation:** See [🏷️ Metadata Legend](../../wiki/Metadata-Legend) for complete tag definitions and usage guidelines.
 
-For the latest AI model performance benchmarks in coding tasks, refer to the [LiveBench AI Coding Leaderboard](https://livebench.ai/#/?Coding=a).
+For the latest AI model performance benchmarks in coding tasks, refer to the [📊 LiveBench AI Coding Leaderboard](https://livebench.ai/#/?Coding=a).
 
 ## License
 
